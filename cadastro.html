@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <script>
+        function fim() {
+            alert('fim');
+            document.location.href = 'file:///C:/src/python-selenium/cadastro2.html'  
+        }
+        
+    </script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <!-- começo-->
+
+    <body class="bg-light">
+        <div class="container">
+            <div class="py-5 text-center">
+                <h2>Formulário</h2>
+                <p class="lead"> Novo Cadastro </p>
+            </div>
+
+            <div class="row">
+                <div class="col-md order-md-1">
+                    <h4 class="mb-3">Dados Pessoais</h4>
+                    <form class="needs-validation" novalidate>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName">Nome</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    Nome é requerido
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName">Sobrenome</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    Sobrenome é requerido
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email">Email <span class="text-muted">(Opcional)</span></label>
+                            <input type="email" class="form-control" id="email" placeholder="voce@email.com.br">
+                            <div class="invalid-feedback">
+                                Por favor, entre com um e-mail válido
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="address">Endereço</label>
+                            <input type="text" class="form-control" id="address" placeholder="Avenida Paulista 123" required>
+                            <div class="invalid-feedback">
+                                Por favor, entre com um endereço válido
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="address2">Complemento <span class="text-muted">(Opcional)</span></label>
+                            <input type="text" class="form-control" id="address2" placeholder="Apto 1001">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-5 mb-3">
+                                <label for="country">Pais</label>
+                                <select class="custom-select d-block w-100" id="country" required>
+                                    <option value="">Escolha...</option>
+                                    <option>Brasil</option>
+                                    <option>Estados Unidos</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Por favor, selecione um pais
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="state">Estado</label>
+                                <select class="custom-select d-block w-100" id="state" required>
+                                    <option value="">Escolha...</option>
+                                    <option>California</option>
+                                    <option>São Paulo</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Por favor, selecione um estado
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="zip">CEP</label>
+                                <input type="text" class="form-control" id="zip" placeholder="" required>
+                                <div class="invalid-feedback">
+                                    CEP é requerido
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="mb-3">Sexo</h4>
+
+                        <div class="d-block my-3">
+                            <div class="custom-control custom-radio">
+                                <input id="gender_m" name="gender" type="radio" class="custom-control-input"
+                                    checked required>
+                                <label class="custom-control-label" for="gender_m">Masculino</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input id="gender_f" name="gender" type="radio" class="custom-control-input"
+                                    required>
+                                <label class="custom-control-label" for="gender_f">Feminino</label>
+                                </div>
+                        </div>
+                        <hr class="mb-4">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="accept-terms">
+                            <label class="custom-control-label" for="accept-terms">Aceito os termos de contrato</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="steal-data">
+                            <label class="custom-control-label" for="steal-data">Aceito ter os meus dados roubados</label>
+                        </div>
+                        <hr class="mb-4">
+
+                        <div class="form-group">
+                            <label for="document">Documento</label>
+                            <input type="file" class="form-control-file" id="document">
+                        </div>
+
+                        <button class="btn btn-primary btn-lg btn-block" type="button" onclick="fim()">Continuar</button>
+                    </form>
+                </div>
+            </div>
+
+            <footer class="my-5 pt-5 text-muted text-center text-small">
+                <p class="mb-1">&copy; 2019 - Automatização de Rotinas com Python e Selenium</p>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">Privacy</a></li>
+                    <li class="list-inline-item"><a href="#">Terms</a></li>
+                    <li class="list-inline-item"><a href="#">Support</a></li>
+                </ul>
+            </footer>
+        </div>
+        <!-- fim-->
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>
