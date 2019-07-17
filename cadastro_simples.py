@@ -21,7 +21,7 @@ act = webdriver.ActionChains(chrome)
 act.move_to_element(chrome.find_element_by_id('steal-data'))
 act.click().perform()
 
-chrome.find_element_by_id('document').send_keys(r'C:\src\python-selenium\cadastro.py')
+chrome.find_element_by_id('document').send_keys(r'C:\src\python-selenium\cadastro_simples.py')
 
 chrome.find_element_by_xpath('//button').click()
 chrome.switch_to.alert.accept()
