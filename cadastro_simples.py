@@ -24,7 +24,13 @@ act.click().perform()
 chrome.find_element_by_id('document').send_keys(r'C:\src\python-selenium\cadastro_simples.py')
 
 chrome.find_element_by_xpath('//button').click()
-chrome.switch_to.alert.accept()
+alert = chrome.switch_to.alert
+
+print('resultado: {}'.format(alert.text))
+alert.accept()
 
 chrome.switch_to.default_content
 chrome.back()
+
+input('Pressione enter para finalizar')
+chrome.close()  
