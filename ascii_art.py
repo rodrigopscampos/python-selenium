@@ -131,7 +131,47 @@ def circulo():
 
 
 if __name__ == "__main__":
-    
+
+    metodos = [
+        quadrado_preenchido,
+        escada,
+        X,
+        trapezio,
+        triangulo,
+        losango,
+        circulo
+    ]
+
+    for n, metodo in zip(range(0, len(metodos)), metodos):
+        print("{} - {}".format(n+1, metodo.__name__))
+
+    opcao = int(input("Figura selecionada: "))
+
+    while True:
+        if opcao < 0 or opcao >= len(metodos):
+            print("Opção inválida")
+        else:
+            print("Figura " + metodos[opcao - 1].__name__)
+            break
+
+    loop = input("Loop infinito ? (S/N) ").upper() == 'S'
+    print("Vamos lá")
+    print()
+
+
+    while True:
+        metodos[opcao - 1]()
+        time.sleep(2)
+        if not loop:
+            break
+        
+        os.system('cls')
+
+
+
+
+
+    '''
     quadrado_preenchido()
     time.sleep(2)
     os.system('cls')
@@ -159,3 +199,4 @@ if __name__ == "__main__":
     circulo()
     time.sleep(2)
     os.system('cls')
+    '''
