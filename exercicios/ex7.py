@@ -15,7 +15,7 @@ navegador.get(
     'file:///C:/src/python-selenium/IntroducaoWeb/html_css_javascript.html')
 
 botoes = navegador.find_elements_by_tag_name('button')
-botoes_add = [b for i, b in zip(range(0, len(botoes)), botoes) if i % 2 == 0]
+botoes_add = botoes[0::2] #os pares
 
 for q, b in zip(quantidades, botoes_add):
     for aux in range(1, q):
