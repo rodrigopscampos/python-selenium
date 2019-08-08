@@ -7,8 +7,8 @@ navegador = webdriver.Chrome()
 
 navegador.get('file:///C:/src/python-selenium/IntroducaoWeb/javascript.html')
 
-navegador.find_element_by_name('btn_exibirhora').click()
-hora = navegador.find_element_by_id('minha_div').text
+navegador.find_elements_by_tag_name('button')[1].click()
+hora = navegador.find_element_by_tag_name('span').text
 
 print("Hora: " + str(hora))
 input("Pressione Enter para fechar")

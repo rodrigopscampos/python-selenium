@@ -1,4 +1,4 @@
-# Automatize o preenchimento do controle de estoque 
+# Automatize o preenchimento do controle de estoque
 # (html_css_javascript.html)
 
 from selenium import webdriver
@@ -14,12 +14,12 @@ navegador = webdriver.Chrome()
 navegador.get(
     'file:///C:/src/python-selenium/IntroducaoWeb/html_css_javascript.html')
 
+botoes = navegador.find_elements_by_tag_name('button')
+botoes_add = [b for i, b in zip(range(0, len(botoes)), botoes) if i % 2 == 0]
 
-i = 0
-for q in quantidades:
+for q, b in zip(quantidades, botoes_add):
     for aux in range(1, q):
-        navegador.find_element_by_id('btn_{}_add'.format(i+1)).click()
-    i += 1
+        b.click()
 
 input("Pressione Enter para fechar")
 navegador.close()
